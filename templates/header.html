@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap-4</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli">
+ <link href= 
+'https://fonts.googleapis.com/css?family=Roboto|Pacifico' 
+          rel='stylesheet'> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style type="text/css">
+.navbar-inverse {
+    background-color: #e5a13e;
+    border:2px solid #C1AA7F;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    font-size:20px;
+    letter-spacing: 2px;
+}	
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #B25E39;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #213638;
+}
+.navbar-inverse .navbar-brand {
+    color: #473D3A;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #283A2C;
+    background-color: transparent;
+}
+#carousel_img
+{
+	width:100%;
+	height: 500px;
+}
+#mycarousel
+{
+	margin-top:-2%;
+}
+@media screen and (max-width:500px)
+{
+	#mycarousel
+	{
+	margin-top:-5%;
+	}
+}
+#content_img
+{
+	width: 100%;
+	height:auto;
+	border:1px solid black;
+	margin-top:5%; 
+	border-radius:10px;
+}
+#content_img:hover
+{
+	-webkit-box-shadow: 4px 6px 60px -14px rgba(6,26,61,1);
+-moz-box-shadow: 4px 6px 60px -14px rgba(6,26,61,1);
+box-shadow: 4px 6px 60px -14px rgba(6,26,61,1);
+
+}
+#content_heading
+{
+	font-family: 'Pacifico', cursive; 
+	font-weight: bold;
+	font-size:30px;
+	letter-spacing: 4px;
+	color:#283A2C;
+}
+#content_details
+{
+	font-family: Georgia, serif;
+	font-size:16px;
+	color:#D2302C;
+}
+#footer1
+{
+	background-color: #e5a13e;
+}
+#footer_heading1
+{
+	 color: #213638;
+	 font-weight: bold;
+	 font-size:30px;
+
+}
+.carousel-caption
+{
+	font-family: 'Pacifico', cursive; 
+	font-weight: bold;
+	font-size:30px;
+	letter-spacing: 4px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+		
+</button>
+<a class="navbar-brand"><img style="height:30px;width:150px;float: left; margin: 0px 100px 100px 0px" src="/static/logo2.png" alt="No Image" id="content_img"/></a>
+</div>
+
+<div class="collapse navbar-collapse" id="mynavbar">
+<ul class="nav navbar-nav navbar-right">
+	<li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url "home" %}">Home</a></li>
+	<li class="{% if request.path == '/about/' %} active {% endif %}"><a href="{% url "about" %}">About</a></li>
+	<li class="{% if request.path == '/category/' %} active {% endif %}"><a href="{% url "category" %}">Category</a></li>
+	<li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="{% url "contact" %}">Contact</a></li>
+</ul>
+
+</div>
+
+
+</div>
+	
+
+</nav>
